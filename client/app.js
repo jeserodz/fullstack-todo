@@ -1,5 +1,5 @@
 (function() {
-	var app = angular.module("BasicTodo", ['ngResource', 'ui.router', 'ngAnimate', 'lbServices']);
+	var app = angular.module("FullstackTodo", ['ngResource', 'ui.router', 'ngAnimate', 'lbServices']);
 	app.config(function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise("/home");
 		$stateProvider
