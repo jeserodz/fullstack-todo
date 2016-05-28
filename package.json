@@ -5,9 +5,11 @@
   "scripts": {
     "start": "node .",
     "pretest": "jshint .",
-    "posttest": "nsp check"
+    "posttest": "nsp check",    
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "dependencies": {
+    "bower": "^1.7.9",
     "compression": "^1.0.3",
     "cookie-parser": "^1.4.2",
     "cors": "^2.5.2",
