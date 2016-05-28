@@ -1,0 +1,19 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+}
+
+tr.ng-enter {
+	-webkit-animation: bounceIn 1s;
+  -moz-animation: bounceIn 1s;
+  -ms-animation: bounceIn 1s;
+  animation: bounceIn 1s;
+}
+tr.ng-leave {
+	-webkit-animation: bounceOut 1s;
+  -moz-animation: bounceOut 1s;
+  -ms-animation: bounceOut 1s;
+  animation: bounceOut 1s;
+}

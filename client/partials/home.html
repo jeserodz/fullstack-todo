@@ -1,0 +1,50 @@
+<div class="animated fadeInUp">
+	<div class="jumbotron text-center">
+		<h1>Full-Stack Todo</h1>
+		<p class="lead">LoopBack + Facebook OAuth + AngularJS + Bootstrap</p>
+
+		<p ng-if="!user">
+			<a href="/auth/facebook" class="btn btn-raised btn-social">
+				<span class="fa fa-facebook"></span>
+				Sign in with Facebook
+			</a>
+		</p>
+
+		<p ng-if="user">
+			<a href="" class="btn btn-raised" ng-click="logout()"><i class="ion-log-out"></i> Logout</a>
+		</p>
+
+	</div>
+
+	<div class="row" ng-show="user">
+		<div class="col-md-8 col-md-offset-2">			
+			<h2>My Tasks</h2>
+			<div class="panel panel-default">
+				<div class="panel-body">
+
+					<div class="form-group label-floating">
+						<label class="control-label">Add a new task</label>
+						<div class="input-group">
+							<input type="text" class="form-control" ng-model="newTaskName">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-fab btn-fab-mini btn-danger" ng-click="addNewTask()">
+									<i class="ion-plus-round"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+
+					<table class="table table-hover">
+						<tr ng-repeat="task in tasks">
+							<td>{{task.name}}</td>
+							<td class="text-right">
+								<button class="btn" ng-click="completeTask(task)"><i class="ion-checkmark"></i></button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
